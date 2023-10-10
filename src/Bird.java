@@ -1,12 +1,22 @@
 //LSP
-class Bird {
+class Bird implements CanFly{
     public void fly() {
         // Реализация полета птицы
+        System.out.println("Птица летает");
     }
 }
 
-class Ostrich extends Bird {
+class Woodpecker extends Bird implements CanFly{
+    @Override
     public void fly() {
-        throw new UnsupportedOperationException("Страус не умеет летать");
+        System.out.println("Дятел умеет летать");
+    }
+}
+
+class Ostrich extends Bird implements Runnable{
+
+    @Override
+    public void run() {
+        System.out.println();
     }
 }

@@ -1,11 +1,6 @@
 //OCP
-class Rectangle {
-    public double width;
-    public double height;
+abstract class Rectangle {
+    protected double width;
+    protected double height;
 }
 
-class AreaCalculator {
-    public double calculateArea(Rectangle rectangle) {
-        return rectangle.width * rectangle.height;
-    }
-}
